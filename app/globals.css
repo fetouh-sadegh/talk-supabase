@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Supabase theme tokens */
+  --color-sb-green: #3ecf8e;
+  --color-sb-green-dim: #1a7a4a;
+  --color-sb-bg: #0a0a0a;
+  --color-sb-surface: #111111;
+  --color-sb-surface-2: #1a1a1a;
+  --color-sb-border: rgba(255, 255, 255, 0.08);
+  --color-sb-border-strong: rgba(255, 255, 255, 0.15);
+  --color-sb-text-muted: #8b9098;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Presentation page global styles */
+.presentation-bg {
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(rgba(62, 207, 142, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 207, 142, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.presentation-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -10%,
+    rgba(62, 207, 142, 0.12),
+    transparent 70%
+  );
+}
+
+.presentation-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 0.5px, transparent 0.5px);
+  background-size: 2px 2px;
+}
+
+/* Marquee animation */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 30s linear infinite;
+}
+.animate-marquee-right {
+  animation: marquee-right 28s linear infinite;
+}
+.group:hover .animate-marquee-left,
+.group:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Scrollbar for presentation */
+.presentation-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.presentation-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.presentation-scroll::-webkit-scrollbar-thumb {
+  background: rgba(62, 207, 142, 0.3);
+  border-radius: 2px;
+}

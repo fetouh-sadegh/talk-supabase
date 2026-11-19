@@ -1,0 +1,541 @@
+{
+  "presentation": {
+    "meta": {
+      "title": "Comment Supabase Accélère le Développement Moderne",
+      "description": "Une conférence technique de Fetouh Ahmed Elhaiba Sadegh pour la Communauté de Programmation Mauritanienne"
+    },
+    "nav": {
+      "backToTop": "Retour en haut",
+      "openMenu": "Menu",
+      "lang": {
+        "en": "EN",
+        "fr": "FR",
+        "ar": "AR"
+      }
+    },
+    "toc": {
+      "title": "Sommaire",
+      "intro": "Introduction",
+      "agenda": "Plan",
+      "scope": "Portée",
+      "what": "Qu'est-ce que Supabase ?",
+      "baas": "Qu'est-ce que BaaS ?",
+      "examples": "Exemples BaaS",
+      "offers": "Ce que Supabase offre",
+      "dx": "Expérience développeur",
+      "vectormind": "Histoire VectorMind",
+      "users": "Qui utilise Supabase ?",
+      "demo": "Démo",
+      "limits": "Limites & Leçons",
+      "qa": "Q&R",
+      "menu": "Menu"
+    },
+    "intro": {
+      "eyebrow": "Communauté de Programmation Mauritanienne",
+      "title": "Comment Supabase Accélère le Développement Moderne",
+      "subtitle": "Des semaines de configuration à la mise en production en heures — un regard pratique sur Supabase",
+      "presentedBy": "Présenté par",
+      "presenterName": "Fetouh Ahmed Elhaiba Sadegh",
+      "bullet1": "Développeur Full Stack",
+      "bullet2": "3 ans d'utilisation de Supabase",
+      "scrollHint": "Défiler pour explorer",
+      "mpcLabel": "MPC",
+      "eventCoverAlt": "Visuel de l'evenement"
+    },
+    "agenda": {
+      "title": "Plan de la conférence",
+      "subtitle": "Ce que nous allons couvrir aujourd'hui",
+      "item0": "De quoi parle cette conférence",
+      "item1": "Qu'est-ce que Supabase ?",
+      "item2": "Qu'est-ce que BaaS ?",
+      "item3": "Exemples de BaaS",
+      "item4": "Ce que Supabase offre",
+      "item5": "Expérience développeur",
+      "item6": "Histoire VectorMind",
+      "item7": "Qui utilise Supabase ?",
+      "item8": "Démo",
+      "item9": "Limites & leçons",
+      "item10": "Q&R"
+    },
+    "scope": {
+      "title": "De quoi parle cette conférence",
+      "subtitle": "Définir les attentes avant de commencer",
+      "card1Title": "Pas un tutoriel",
+      "card1Desc": "Nous ne construirons pas une application complète. C'est à ça que servent les docs.",
+      "card2Title": "Pas une guerre de comparaison",
+      "card2Desc": "Les débats Firebase vs Supabase sont du bruit. On passe.",
+      "card3Title": "L'objectif réel",
+      "card3Desc": "Vous aider à décider si Supabase convient à votre prochain projet."
+    },
+    "what": {
+      "title": "Qu'est-ce que Supabase ?",
+      "oneliner": "Supabase est un Backend-as-a-Service open-source construit sur PostgreSQL.",
+      "tagline": "L'alternative open source à Firebase.",
+      "openSource": "100% Open Source",
+      "selfHostable": "Auto-hébergeable",
+      "feature1": "PostgreSQL",
+      "feature1Desc": "Du vrai SQL. Pas du NoSQL. La base de données open-source la plus avancée.",
+      "feature2": "Auth",
+      "feature2Desc": "Gestion des utilisateurs avec JWT, OAuth et magic links.",
+      "feature3": "Storage",
+      "feature3Desc": "Stockage d'objets compatible S3 avec politiques et CDN.",
+      "feature4": "Realtime",
+      "feature4Desc": "Mises à jour en direct via WebSockets. Abonnez-vous à n'importe quelle table."
+    },
+    "baas": {
+      "title": "Qu'est-ce que BaaS ?",
+      "acronym": "Backend-as-a-Service",
+      "description": "Le BaaS permet aux développeurs frontend d'éviter la gestion des serveurs. Au lieu de construire l'auth, les APIs et les bases de données from scratch, vous connectez à un backend géré.",
+      "frontend": "Votre App",
+      "baasLabel": "Couche BaaS",
+      "provides1": "Base de données",
+      "provides2": "Auth",
+      "provides3": "Stockage",
+      "provides4": "APIs REST / GraphQL",
+      "benefit": "Vous vous concentrez sur le produit. BaaS gère la plomberie.",
+      "traditionalTitle": "Architecture traditionnelle",
+      "protocol": "HTTP / REST",
+      "apiLayer": "Couche API",
+      "backendServer": "Serveur backend",
+      "database": "Base de donnees",
+      "authService": "Service d'authentification",
+      "storageService": "Stockage",
+      "traditionalNote": "Chaque couche demande une configuration separee, un branchement auth et une mise a l'echelle.",
+      "transitionLabel": "BaaS remplace tout cela",
+      "withBaas": "Avec BaaS - Supabase",
+      "supabaseName": "Supabase"
+    },
+    "examples": {
+      "title": "Exemples de BaaS",
+      "subtitle": "Vous n'êtes pas seul à choisir les backends gérés",
+      "note": "Chacun a ses compromis. Supabase mise sur les standards ouverts et PostgreSQL.",
+      "firebase": "Firebase",
+      "firebaseDesc": "BaaS de Google. NoSQL, temps réel, serverless. Écosystème mature.",
+      "appwrite": "Appwrite",
+      "appwriteDesc": "BaaS open-source. Auto-hébergeable. Support SQL + NoSQL.",
+      "xano": "Xano",
+      "xanoDesc": "Constructeur de backend no-code. Concepteur d'API visuel. Postgres dessous."
+    },
+    "offers": {
+      "title": "Ce que Supabase Offre",
+      "subtitle": "Une plateforme backend complète en un seul endroit",
+      "db": "Base de données PostgreSQL",
+      "dbDesc": "Base de données relationnelle avec extensions : pg_cron, PostGIS, pgvector et bien d'autres.",
+      "vector": "Base de données vectorielle",
+      "vectorDesc": "Intégration pgvector pour les embeddings IA et la recherche sémantique.",
+      "auth": "Authentification",
+      "authDesc": "Email, OAuth, magic links, SSO — avec Row Level Security intégré nativement.",
+      "storage": "Stockage",
+      "storageDesc": "Stockage d'objets compatible S3 avec CDN, politiques et transformations d'images.",
+      "realtime": "Temps réel",
+      "realtimeDesc": "Abonnez-vous aux changements DB, diffusez des messages, suivez la présence.",
+      "edge": "Edge Functions",
+      "edgeDesc": "Déployez des fonctions TypeScript/JavaScript globalement avec Deno.",
+      "logs": "Logs & Observabilité",
+      "logsDesc": "Interrogez vos logs avec SQL. Tableaux de bord intégrés. Aucun outil supplémentaire.",
+      "selfhost": "Auto-hébergement",
+      "selfhostDesc": "Stack Docker Compose complète disponible. Possédez vos données. Zéro lock-in.",
+      "mcp": "Support MCP",
+      "mcpDesc": "Connectez les workflows Supabase avec des outils et agents IA compatibles MCP."
+    },
+    "dx": {
+      "title": "Expérience Développeur",
+      "subtitle": "Conçu pour que vous puissiez livrer, pas configurer",
+      "instant": "APIs instantanées",
+      "instantDesc": "PostgREST génère automatiquement une API REST complète depuis votre schéma.",
+      "sql": "SQL & Migrations",
+      "sqlDesc": "Écrivez du vrai SQL. Versionnez votre schéma avec les migrations CLI Supabase.",
+      "rls": "Sécurité RLS-first",
+      "rlsDesc": "Politiques Row Level Security définies en SQL. Votre sécurité vit dans la base de données.",
+      "dashboard": "Dashboard visuel",
+      "dashboardDesc": "Gérez les tables, consultez les logs et surveillez l'utilisation dans le navigateur.",
+      "local": "Développement local",
+      "localDesc": "Stack Supabase local complet via CLI. Miroir exact de votre environnement de production.",
+      "community": "Docs & Communauté",
+      "communityDesc": "Documentation de premier ordre. Discord actif, discussions GitHub et chaîne YouTube."
+    },
+    "vectormind": {
+      "eyebrow": "Étude de cas",
+      "title": "Comment Supabase a tout change pour Portal.mr",
+      "subtitle": "Notre plateforme d'emploi et d'opportunites a ete transformee apres la migration vers Supabase.",
+      "story1": "Portal.mr est une plateforme centrale pour trouver des marches publics, appels d'offres, projets gouvernementaux, reglementations et opportunites d'emploi.",
+      "story2": "Elle est ouverte a tous: entreprises, institutions publiques, fournisseurs et professionnels.",
+      "story3": "Apres migration de nos workflows backend vers Supabase, nous livrons plus vite avec moins de complexite.",
+      "highlight": "Supabase a donne a Portal.mr un chemin plus rapide et plus propre vers la production.",
+      "impact": "3 mois -> 3 jours",
+      "reason1": "Boilerplate auth éliminé (JWT, sessions, refresh tokens)",
+      "reason2": "pgvector a remplacé un microservice vectoriel custom",
+      "reason3": "RLS a remplacé 400+ lignes de gardes de permission codées à la main",
+      "reason4": "Edge Functions ont remplacé plusieurs services Spring Boot",
+      "screenshotAlt": "Capture d'écran du portail VectorMind",
+      "story4": "Nous avons aussi ajoute un assistant IA pour guider les utilisateurs et faciliter la recherche d'opportunites.",
+      "summary": "Portal.mr tourne maintenant avec Supabase et un assistant IA.",
+      "portalLabel": "portal.mr",
+      "exitFullscreen": "Quitter le plein ecran",
+      "originalStack": "Stack initiale",
+      "fullscreen": "Plein ecran",
+      "migrationResult": "Resultat de migration",
+      "newStack": "Nouveau stack"
+    },
+    "users": {
+      "title": "Qui Utilise Supabase ?",
+      "subtitle": "Adopté par des startups et des entreprises à grande échelle",
+      "testimonialsTitle": "Ce que disent les développeurs",
+      "avatarAlt": "Avatar de {name}",
+      "testimonials": {
+        "muhammed": {
+          "role": "Community Lead @ Developpeurs Mauritaniens",
+          "message": "Je l'utilise seulement pour des projets universitaires."
+        },
+        "sidi": {
+          "role": "Developpeur full-stack",
+          "message": "Oui, nous avons utilise Supabase dans plusieurs projets, dont un construit avec mon ami M'Hamed El Bah pendant le hackathon Supabase. C'etait une tres bonne experience et nous avons gagne la competition."
+        },
+        "ahmedouVadel": {
+          "role": "Ingenieur logiciel",
+          "message": "Je l'utilise pour le MVP. C'est une excellente solution BaaS pour aller vite et se concentrer sur le produit."
+        },
+        "ahmedAbdat": {
+          "role": "Developpeur full-stack",
+          "message": "J'utilise surtout Supabase pour mes projets personnels, et l'experience est excellente. Je l'ai aussi utilise pour quelques projets clients."
+        },
+        "mohamedSaleck": {
+          "role": "Developpeur mobile & web",
+          "message": "Je l'utilise. C'est tres bon et simple a utiliser."
+        },
+        "yehdih": {
+          "role": "Etudiant en master",
+          "message": "Je l'ai deja utilise. C'est excellent."
+        },
+        "ahmedouHacen": {
+          "role": "Fondateur & CEO chez SaharaTech Solutions",
+          "message": "En tant que CEO et directeur technique, j'utilise Supabase de maniere intensive en Mauritanie. Nous avons construit tout le systeme d'un grand cabinet medical local sur Supabase, et nous avons actuellement environ cinq autres clients qui utilisent Supabase comme backend et base de donnees."
+        }
+      }
+    },
+    "demo": {
+      "title": "Démo en direct",
+      "subtitle": "Supabase en action",
+      "step1": "Auth - inscription & connexion",
+      "step2": "Base de donnees - inserer & interroger",
+      "step3": "Temps reel - notes/messages visibles instantanement pour tous",
+      "step4": "Recherche - filtrer les messages avec la recherche PostgreSQL",
+      "note": "Si quelque chose se casse pendant la démo, c'est aussi une leçon.",
+      "step5": "Stockage - uploader un fichier",
+      "step6": "RLS - application des politiques"
+    },
+    "limits": {
+      "title": "Limits & Lessons",
+      "subtitle": "Real issues from usage and feedback.",
+      "limit1Title": "Auth issue",
+      "limit1Desc": "Auth logout with no clear reason in some sessions.",
+      "limit2Title": "Client fetch limit",
+      "limit2Desc": "Client can't fetch more than 1000 rows in one request.",
+      "limit3Title": "Realtime stability",
+      "limit3Desc": "Realtime updates are sometimes not stable or delayed.",
+      "lessonTitle": "What this means",
+      "lessonDesc": "No tool is perfect. Every technology has limits and occasional issues. But before blaming the tool:",
+      "constructive": "When something goes wrong, first review the architecture, configuration, and usage before blaming the tool. Often the problem comes from how the system is designed or used. If everything is set up correctly and the issue persists, then it may be a real limitation. In that case, adapt the architecture or complement the tool where needed.",
+      "issueNote": "Client1000 fetch limit is one I had. Others were mentioned by people. Probably much more.",
+      "moreIssuesSubtitle": "Storage upload problems, database too slow, vector search results are not good, etc... and probably much more."
+    },
+    "qa": {
+      "community": "Mauritanian Developer Community",
+      "title": "Questions ?",
+      "subtitle": "Merci pour votre attention",
+      "ctaDocs": "Documentation Supabase",
+      "ctaYoutube": "Supabase YouTube",
+      "ctaMpc": "Rejoindre la communauté MPC",
+      "madeWith": "Fait avec Next.js + Supabase"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Accueil de la conference Supabase",
+      "description": "Page d'accueil de l'evenement Supabase avec liens vers presentation, demo et challenge."
+    },
+    "nav": {
+      "community": "Communaute des Developpeurs Mauritaniens",
+      "links": {
+        "presentation": "Presentation",
+        "demo": "Demo",
+        "challenge": "Challenge"
+      },
+      "lang": {
+        "en": "EN",
+        "fr": "FR",
+        "ar": "AR"
+      },
+      "goHome": "Aller a l'accueil"
+    },
+    "hero": {
+      "eyebrow": "Evenement communautaire Supabase",
+      "title": "Comment Supabase Accelere le Developpement Moderne",
+      "subtitle": "Un evenement pratique pour creer des applications en production plus rapidement avec Supabase.",
+      "noteTalk": "Langue du talk : arabe",
+      "noteQA": "Q&R : anglais possible",
+      "noteSlides": "Slides partages apres l'evenement en EN/FR/AR",
+      "coverAlt": "Visuel de l'evenement Supabase",
+      "cta": {
+        "community": "Rejoindre la communaute",
+        "docs": "Documentation Supabase",
+        "youtube": "Supabase YouTube"
+      }
+    },
+    "sections": {
+      "internalTitle": "Explorer l'evenement",
+      "externalTitle": "Liens utiles"
+    },
+    "cards": {
+      "presentation": {
+        "title": "Presentation",
+        "description": "Le contenu du talk slide par slide avec la vision complete de Supabase."
+      },
+      "demo": {
+        "title": "Demo (Message Wall)",
+        "description": "Une experience pratique inspiree de la session en direct."
+      },
+      "challenge": {
+        "title": "Challenge",
+        "description": "Challenge interactif pour les participants."
+      },
+      "eventRecord": {
+        "title": "Enregistrement de l'evenement",
+        "description": "Regarder l'enregistrement complet sur Google Drive."
+      },
+      "luma": {
+        "title": "Inscription Luma",
+        "description": "Inscrivez-vous ou revisitez la page de l'evenement sur Luma."
+      },
+      "whatsapp": {
+        "title": "WhatsApp Communaute",
+        "description": "Rejoignez le groupe communautaire pour suivre les mises a jour."
+      },
+      "docs": {
+        "title": "Docs Supabase",
+        "description": "Documentation officielle pour apprendre et implementer."
+      },
+      "youtube": {
+        "title": "YouTube Supabase",
+        "description": "Chaine officielle pour tutoriels et nouveautes."
+      },
+      "linkedin": {
+        "title": "LinkedIn du speaker",
+        "description": "Lien de profil a ajouter bientot."
+      }
+    }
+  },
+  "challenge": {
+    "title": "Supabase Challenge : Reclamer un code",
+    "subtitle": "Glissez les blocs pour construire la requete, puis lancez.",
+    "codes": "Codes restants : {remaining} / {total}",
+    "warning": "Seules les deux premieres reclamations valides gagnent.",
+    "disabledNotice": "Le challenge est actuellement desactive.",
+    "allClaimedNotice": "Vous pouvez toujours jouer, mais tous les codes ont deja ete reclames.",
+    "eyebrow": "Construisez un flux de requete Supabase valide",
+    "form": {
+      "fullNameLabel": "Nom complet",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "whatsappLabel": "WhatsApp",
+      "whatsappPlaceholder": "+222 45 00 00 00"
+    },
+    "claimed": {
+      "title": "Deja reclames",
+      "empty": "Personne n a encore reclame de code.",
+      "name": "Nom",
+      "whatsapp": "WhatsApp"
+    },
+    "palette": {
+      "title": "Palette de blocs"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "rowBuilder": "Constructeur de ligne",
+      "legend": {
+        "client": "1. Client",
+        "action": "2. Action (RPC ou SELECT)",
+        "rpcParams": "Parametres RPC : participant + whatsapp",
+        "selectParams": "Parametres SELECT : participant/whatsapp optionnels",
+        "params": "3. Parametres"
+      },
+      "empty": "Deposez les blocs ici pour assembler votre requete.",
+      "removeBlock": "Retirer le bloc"
+    },
+    "runPanel": {
+      "running": "Execution...",
+      "run": "Executer",
+      "reset": "Reinitialiser",
+      "idle": "Assemblez un pipeline valide puis cliquez sur Executer.",
+      "availableCode": "Code disponible : {code}",
+      "claimedCode": "Vous avez reclame {code}",
+      "claimId": "claim_id",
+      "previewHelp": "Passez a rpc + claim_giveaway_code pour soumettre une reclamation gagnante.",
+      "claimHelp": "Envoyez votre claim_id sur WhatsApp pour confirmer.",
+      "confirmOnWhatsapp": "Confirmer sur WhatsApp ({phone})"
+    },
+    "status": {
+      "previewSuccess": "Execution terminee. Vous avez consulte le code disponible via la table.",
+      "claimSuccess": "Execution terminee. Requete de reclamation valide."
+    },
+    "errors": {
+      "nameRequired": "Le nom est obligatoire.",
+      "whatsappRequired": "WhatsApp est obligatoire.",
+      "invalidPhone": "Veuillez entrer un numero de telephone valide.",
+      "challengeDisabled": "Le challenge est actuellement desactive.",
+      "whatsappAlreadyClaimed": "Ce numero WhatsApp a deja reclame un code.",
+      "noCodesRemaining": "Tous les codes ont deja ete reclames.",
+      "claimConflict": "Conflit de reclamation, reessayez.",
+      "fixFormErrors": "Corrigez les erreurs du formulaire avant de lancer.",
+      "pipelineEmpty": "Le pipeline est vide. Glissez des blocs d abord.",
+      "executionUnexpected": "Echec inattendu de l execution. Reessayez.",
+      "requestFailed": "La requete a echoue.",
+      "pipelineEmptyBeforeRun": "Le pipeline est vide. Ajoutez des blocs avant de lancer.",
+      "mustStartWithClient": "Le pipeline doit commencer par supabase_client.",
+      "missingOperation": "Bloc operation manquant : rpc ou select_available_code.",
+      "missingRpcStep": "Etape rpc manquante avant l appel de fonction.",
+      "missingRpcFunction": "Nom de fonction RPC manquant.",
+      "wrongRpcFunction": "Nom de fonction RPC incorrect.",
+      "unexpectedAfterQuery": "Bloc inattendu apres la requete : {block}",
+      "unsupportedParameter": "Parametre non supporte : {block}",
+      "parameterDuplicated": "Parametre duplique : {block}",
+      "unexpectedAfterFunction": "Bloc inattendu apres la fonction : {block}",
+      "missingRequiredParameter": "Parametre requis manquant : {block}"
+    }
+  },
+  "demo": {
+    "header": {
+      "eyebrow": "Demo en direct",
+      "title": "Mur de messages",
+      "subtitle": "Mode mock pour l'instant. Concu pour basculer vers auth, base de donnees et realtime Supabase avec un refactor minimal."
+    },
+    "loading": "Chargement du mur...",
+    "empty": "Aucun message ne correspond a votre recherche. Essayez une requete plus large.",
+    "search": {
+      "title": "Recherche et filtre",
+      "placeholder": "Rechercher texte, nom, role...",
+      "roles": {
+        "all": "Tous les roles",
+        "student": "Etudiant",
+        "professional": "Professionnel",
+        "other": "Autre"
+      },
+      "positions": {
+        "all": "Toutes les positions"
+      }
+    },
+    "fab": {
+      "addTitle": "Ajouter un message",
+      "add": "Ajouter",
+      "searchTitle": "Rechercher et filtrer",
+      "search": "Recherche",
+      "profileTitle": "Modifier le profil",
+      "profile": "Profil",
+      "loginTitle": "Se connecter ou creer un compte",
+      "login": "Connexion",
+      "logoutTitle": "Se deconnecter",
+      "logout": "Deconnexion"
+    },
+    "authModal": {
+      "title": "Creer un compte",
+      "subtitle": "Mode auth mock : votre compte est valide instantanement, sans confirmation email.",
+      "submit": "Creer le compte",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
+      "roleLabel": "Role",
+      "rolePlaceholder": "ex: Etudiant, Developpeur, Fondateur",
+      "avatarLabel": "Image avatar",
+      "avatarPlaceholder": "URL image (optionnel)",
+      "preview": "Apercu",
+      "cancel": "Annuler",
+      "saving": "Enregistrement...",
+      "editTitle": "Modifier le profil",
+      "editSubtitle": "Edition de profil mock. Plus tard cela mettra a jour votre ligne de profil Supabase.",
+      "editSubmit": "Enregistrer le profil",
+      "signInTab": "Connexion",
+      "signUpTab": "Inscription",
+      "signInTitle": "Connexion",
+      "signUpTitle": "Creer un compte",
+      "signInSubtitle": "Utilisez votre compte Supabase pour publier avec vos metadonnees de profil.",
+      "signUpSubtitle": "Creez un compte et renseignez nom, position et image de profil.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "vous@example.com",
+      "passwordLabel": "Mot de passe",
+      "passwordPlaceholder": "Votre mot de passe",
+      "positionLabel": "Position",
+      "positionPlaceholder": "ex: Etudiant, Developpeur, Fondateur",
+      "profilImageLabel": "URL image de profil",
+      "profilImagePlaceholder": "https://...",
+      "signInSubmit": "Se connecter",
+      "signUpSubmit": "S'inscrire"
+    },
+    "addMessageModal": {
+      "title": "Ajouter un message",
+      "subtitle": "Mode mock pour l'instant. Plus tard cela inserera des lignes dans Supabase.",
+      "titleLabel": "Titre (optionnel)",
+      "titlePlaceholder": "Titre rapide",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Partagez une note avec tout le monde...",
+      "charsLeft": "{count} caracteres restants",
+      "colorLabel": "Couleur de carte",
+      "pickColor": "Choisir {color}",
+      "cancel": "Annuler",
+      "posting": "Publication...",
+      "submit": "Publier le message"
+    },
+    "errors": {
+      "loadFailed": "Impossible de charger les donnees mock du mur. Rafraichissez la page.",
+      "nameRequired": "Veuillez entrer votre nom.",
+      "roleRequired": "Veuillez entrer votre role.",
+      "authFailed": "Impossible de creer le compte. Reessayez.",
+      "loginBeforeEdit": "Connectez-vous avant de modifier le profil.",
+      "loginBeforePost": "Connectez-vous avant de publier.",
+      "messageRequired": "Veuillez entrer un message.",
+      "messageTooLong": "Le message est trop long. Maximum {max} caracteres.",
+      "cooldown": "Veuillez attendre {seconds}s avant de republier.",
+      "requestFailed": "La requete a echoue.",
+      "emailRequired": "Veuillez entrer votre email.",
+      "passwordRequired": "Veuillez entrer votre mot de passe.",
+      "positionRequired": "Veuillez entrer votre position.",
+      "invalidCredentials": "Email ou mot de passe invalide.",
+      "accountExists": "Un compte existe deja pour cet email.",
+      "deleteNotAllowed": "Vous pouvez seulement supprimer vos propres messages.",
+      "signInFirst": "Veuillez vous connecter d abord.",
+      "messageNotFound": "Message introuvable."
+    },
+    "toolbar": {
+      "searchLabel": "Rechercher des messages",
+      "searchPlaceholder": "Rechercher texte, nom, role...",
+      "filterLabel": "Filtrer le role",
+      "roles": {
+        "all": "Tous les roles",
+        "student": "Etudiant",
+        "professional": "Professionnel",
+        "other": "Autre"
+      },
+      "login": "Connexion",
+      "profile": "Profil",
+      "add": "Ajouter",
+      "positions": {
+        "all": "Toutes les positions"
+      },
+      "logout": "Deconnexion"
+    },
+    "authStatus": "Connecte en tant que {email}",
+    "anonymousName": "Anonyme",
+    "anonymousPosition": "Invite",
+    "deleteMessage": "Supprimer le message",
+    "profileModal": {
+      "title": "Modifier le profil",
+      "subtitle": "Mode UI uniquement pour le moment. Cela mettra a jour les metadonnees auth plus tard.",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
+      "positionLabel": "Position",
+      "positionPlaceholder": "ex: Etudiant, Developpeur, Fondateur",
+      "profilImageLabel": "URL image de profil",
+      "profilImagePlaceholder": "https://...",
+      "cancel": "Annuler",
+      "saving": "Enregistrement...",
+      "save": "Enregistrer le profil"
+    }
+  }
+}

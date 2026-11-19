@@ -1,0 +1,541 @@
+{
+  "presentation": {
+    "meta": {
+      "title": "How Supabase Accelerates Modern Development",
+      "description": "A technical talk by Fetouh Ahmed Elhaiba Sadegh for the Mauritanian Programming Community"
+    },
+    "nav": {
+      "backToTop": "Back to top",
+      "openMenu": "Menu",
+      "lang": {
+        "en": "EN",
+        "fr": "FR",
+        "ar": "AR"
+      }
+    },
+    "toc": {
+      "title": "Contents",
+      "intro": "Introduction",
+      "agenda": "Agenda",
+      "scope": "Scope",
+      "what": "What is Supabase?",
+      "baas": "What is BaaS?",
+      "examples": "BaaS Examples",
+      "offers": "What Supabase Offers",
+      "dx": "Developer Experience",
+      "vectormind": "VectorMind Story",
+      "users": "Who Uses Supabase?",
+      "demo": "Demo",
+      "limits": "Limits & Lessons",
+      "qa": "Q&A",
+      "menu": "Menu"
+    },
+    "intro": {
+      "eyebrow": "Mauritanian Programming Community",
+      "title": "How Supabase Accelerates Modern Development",
+      "subtitle": "From weeks of setup to shipping in hours — a practical look at building production-grade apps with Supabase",
+      "presentedBy": "Presented by",
+      "presenterName": "Fetouh Ahmed Elhaiba Sadegh",
+      "bullet1": "Full Stack Developer",
+      "bullet2": "Using Supabase for 3 years",
+      "scrollHint": "Scroll to explore",
+      "mpcLabel": "MPC",
+      "eventCoverAlt": "Event cover"
+    },
+    "agenda": {
+      "title": "Talk Plan",
+      "subtitle": "What we'll cover today",
+      "item0": "What this talk is",
+      "item1": "What is Supabase?",
+      "item2": "What is BaaS?",
+      "item3": "BaaS examples",
+      "item4": "What Supabase offers",
+      "item5": "Developer experience",
+      "item6": "VectorMind story",
+      "item7": "Who uses Supabase?",
+      "item8": "Demo",
+      "item9": "Limits & lessons",
+      "item10": "Q&A"
+    },
+    "scope": {
+      "title": "What This Talk Is",
+      "subtitle": "Setting expectations before we start",
+      "card1Title": "Not a tutorial",
+      "card1Desc": "We won't build a full app from scratch. That's what docs are for.",
+      "card2Title": "Not a comparison war",
+      "card2Desc": "Firebase vs Supabase debates are noise. We won't go there.",
+      "card3Title": "The real goal",
+      "card3Desc": "Help you decide if Supabase is the right fit for your next project."
+    },
+    "what": {
+      "title": "What is Supabase?",
+      "oneliner": "Supabase is an open-source Backend-as-a-Service built on PostgreSQL.",
+      "tagline": "The open source Firebase alternative.",
+      "openSource": "100% Open Source",
+      "selfHostable": "Self-hostable",
+      "feature1": "PostgreSQL",
+      "feature1Desc": "Real SQL. Not NoSQL. The world's most advanced open-source database.",
+      "feature2": "Auth",
+      "feature2Desc": "Built-in user management with JWT, OAuth, and magic links.",
+      "feature3": "Storage",
+      "feature3Desc": "S3-compatible object storage with policies and CDN.",
+      "feature4": "Realtime",
+      "feature4Desc": "Live updates via WebSockets. Subscribe to any table change."
+    },
+    "baas": {
+      "title": "What is BaaS?",
+      "acronym": "Backend-as-a-Service",
+      "description": "BaaS lets frontend developers skip server management. Instead of building auth, APIs, and databases from scratch, you connect to a fully managed backend.",
+      "frontend": "Your App",
+      "baasLabel": "BaaS Layer",
+      "provides1": "Database",
+      "provides2": "Auth",
+      "provides3": "Storage",
+      "provides4": "REST / GraphQL APIs",
+      "benefit": "You focus on the product. BaaS handles the plumbing.",
+      "traditionalTitle": "Traditional Architecture",
+      "protocol": "HTTP / REST",
+      "apiLayer": "API Layer",
+      "backendServer": "Backend Server",
+      "database": "Database",
+      "authService": "Auth Service",
+      "storageService": "Storage",
+      "traditionalNote": "Every layer requires separate setup, auth wiring, and scaling.",
+      "transitionLabel": "BaaS replaces all of that",
+      "withBaas": "With BaaS - Supabase",
+      "supabaseName": "Supabase"
+    },
+    "examples": {
+      "title": "BaaS Examples",
+      "subtitle": "You are not alone in choosing managed backends",
+      "note": "Each has trade-offs. Supabase bets on open standards and PostgreSQL.",
+      "firebase": "Firebase",
+      "firebaseDesc": "Google's BaaS. NoSQL, real-time, serverless. Mature ecosystem.",
+      "appwrite": "Appwrite",
+      "appwriteDesc": "Open-source BaaS. Self-hostable. SQL + NoSQL support.",
+      "xano": "Xano",
+      "xanoDesc": "No-code backend builder. Visual API designer. Postgres underneath."
+    },
+    "offers": {
+      "title": "What Supabase Offers",
+      "subtitle": "A complete backend platform in one place",
+      "db": "PostgreSQL Database",
+      "dbDesc": "Full relational DB with extensions: pg_cron, PostGIS, pgvector, and hundreds more.",
+      "vector": "Vector DB",
+      "vectorDesc": "pgvector integration for AI embeddings and semantic search out of the box.",
+      "auth": "Authentication",
+      "authDesc": "Email, OAuth, magic links, SSO — with Row Level Security natively integrated.",
+      "storage": "Storage",
+      "storageDesc": "S3-compatible object storage with CDN, fine-grained policies, and image transforms.",
+      "realtime": "Realtime",
+      "realtimeDesc": "Subscribe to DB changes, broadcast messages, and track presence channels.",
+      "edge": "Edge Functions",
+      "edgeDesc": "Deploy TypeScript / JavaScript functions globally with a Deno runtime.",
+      "logs": "Logs & Observability",
+      "logsDesc": "Query your logs with SQL. Built-in dashboards. No extra observability tooling needed.",
+      "selfhost": "Self-Hosting",
+      "selfhostDesc": "Full Docker Compose stack available. Own your data. Zero vendor lock-in.",
+      "mcp": "MCP Support",
+      "mcpDesc": "Connect Supabase workflows with MCP-compatible tools and AI agents."
+    },
+    "dx": {
+      "title": "Developer Experience",
+      "subtitle": "Designed so you can ship, not configure",
+      "instant": "Instant APIs",
+      "instantDesc": "PostgREST auto-generates a full REST API from your schema. Zero configuration.",
+      "sql": "SQL & Migrations",
+      "sqlDesc": "Write real SQL. Version-control your schema with Supabase CLI migrations.",
+      "rls": "RLS-First Security",
+      "rlsDesc": "Row Level Security policies defined in SQL. Your security lives in the database.",
+      "dashboard": "Visual Dashboard",
+      "dashboardDesc": "Manage tables, view logs, and monitor usage — all in the browser.",
+      "local": "Local Development",
+      "localDesc": "Full local Supabase stack via CLI. Exactly mirrors your production environment.",
+      "community": "Docs & Community",
+      "communityDesc": "Best-in-class docs. Active Discord, GitHub discussions, and YouTube channel."
+    },
+    "vectormind": {
+      "eyebrow": "Case Study",
+      "title": "How Supabase Changed Everything For Portal.mr",
+      "subtitle": "Our job and opportunities platform transformed after moving to Supabase.",
+      "story1": "Portal.mr is a central platform to discover public procurement, tenders, government projects, regulations, and job opportunities.",
+      "story2": "It is open to everyone: businesses, public institutions, suppliers, and professionals.",
+      "story3": "After moving our backend workflows to Supabase, we shipped faster and simplified operations.",
+      "highlight": "Supabase gave Portal.mr a faster and cleaner path from idea to production.",
+      "impact": "3 months -> 3 days",
+      "reason1": "Eliminated boilerplate auth (JWT, sessions, refresh tokens)",
+      "reason2": "pgvector replaced a custom vector store microservice",
+      "reason3": "RLS replaced 400+ lines of hand-coded permission guards",
+      "reason4": "Edge Functions replaced multiple Spring Boot services",
+      "screenshotAlt": "VectorMind portal screenshot",
+      "story4": "We also added an AI assistant to guide users and improve discovery across the platform.",
+      "summary": "Portal.mr now runs with Supabase and an AI assistant.",
+      "portalLabel": "portal.mr",
+      "exitFullscreen": "Exit fullscreen",
+      "originalStack": "Original stack",
+      "fullscreen": "Fullscreen",
+      "migrationResult": "Migration result",
+      "newStack": "New stack"
+    },
+    "users": {
+      "title": "Who Uses Supabase?",
+      "subtitle": "Trusted by startups and enterprises at scale",
+      "testimonialsTitle": "What developers say",
+      "avatarAlt": "{name} avatar",
+      "testimonials": {
+        "muhammed": {
+          "role": "Community Lead @ Mauritanian Developers",
+          "message": "Using it only for university projects."
+        },
+        "sidi": {
+          "role": "Full-stack developer",
+          "message": "Yes, we have used Supabase in several projects, including one my friend M'Hamed El Bah and I built during the Supabase hackathon. It was a great experience, and we won the competition."
+        },
+        "ahmedouVadel": {
+          "role": "Software Engineer",
+          "message": "I use it for the MVP. It's a great BaaS solution to move fast and focus on the product."
+        },
+        "ahmedAbdat": {
+          "role": "Full-stack Developer",
+          "message": "I've been using Supabase mainly for personal projects, and it's been a great experience. I've also used it for a few client projects."
+        },
+        "mohamedSaleck": {
+          "role": "Mobile & Web developer",
+          "message": "I use it. It is very good and simple to use."
+        },
+        "yehdih": {
+          "role": "Master's Student",
+          "message": "I used it before. It is great."
+        },
+        "ahmedouHacen": {
+          "role": "Founder & CEO at SaharaTech Solutions",
+          "message": "As CEO and technical director, I've used Supabase extensively in Mauritania. We built the full system of a major local medical cabinet on Supabase, and we currently have around five other clients using Supabase as backend and database."
+        }
+      }
+    },
+    "demo": {
+      "title": "Live Demo",
+      "subtitle": "Supabase in action",
+      "step1": "Auth - sign up & sign in",
+      "step2": "Database - insert & query rows",
+      "step3": "Realtime - notes/messages appear instantly for everyone",
+      "step4": "Search - filter messages with simple Postgres-powered search",
+      "note": "If something breaks during the demo, that's also a lesson.",
+      "step5": "Storage - upload a file",
+      "step6": "RLS - policy enforcement live"
+    },
+    "limits": {
+      "title": "Limits & Lessons",
+      "subtitle": "Real issues from usage and feedback.",
+      "limit1Title": "Auth issue",
+      "limit1Desc": "Auth logout with no clear reason in some sessions.",
+      "limit2Title": "Client fetch limit",
+      "limit2Desc": "Client can't fetch more than 1000 rows in one request.",
+      "limit3Title": "Realtime stability",
+      "limit3Desc": "Realtime updates are sometimes not stable or delayed.",
+      "lessonTitle": "What this means",
+      "lessonDesc": "No tool is perfect. Every technology has limits and occasional issues. But before blaming the tool:",
+      "constructive": "When something goes wrong, first review the architecture, configuration, and usage before blaming the tool. Often the problem comes from how the system is designed or used. If everything is set up correctly and the issue persists, then it may be a real limitation. In that case, adapt the architecture or complement the tool where needed.",
+      "issueNote": "Client1000 fetch limit is one I had. Others were mentioned by people. Probably much more.",
+      "moreIssuesSubtitle": "Storage upload problems, database too slow, vector search results are not good, etc... and probably much more."
+    },
+    "qa": {
+      "community": "Mauritanian Developer Community",
+      "title": "Questions?",
+      "subtitle": "Thank you for your attention",
+      "ctaDocs": "Supabase Docs",
+      "ctaYoutube": "Supabase YouTube",
+      "ctaMpc": "Join MPC Community",
+      "madeWith": "Made with Next.js + Supabase"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Supabase Talk Home",
+      "description": "Event home for the Supabase community talk with links to presentation, demo, and challenge."
+    },
+    "nav": {
+      "community": "Mauritanian Developer Community",
+      "links": {
+        "presentation": "Presentation",
+        "demo": "Demo",
+        "challenge": "Challenge"
+      },
+      "lang": {
+        "en": "EN",
+        "fr": "FR",
+        "ar": "AR"
+      },
+      "goHome": "Go to home page"
+    },
+    "hero": {
+      "eyebrow": "Supabase Community Event",
+      "title": "How Supabase Accelerates Modern Development",
+      "subtitle": "A practical event on building production-ready apps faster with Supabase.",
+      "noteTalk": "Talk language: Arabic",
+      "noteQA": "Q&A: English possible",
+      "noteSlides": "Slides shared after event in EN/FR/AR",
+      "coverAlt": "Supabase event cover",
+      "cta": {
+        "community": "Join Community",
+        "docs": "Supabase Docs",
+        "youtube": "Supabase YouTube"
+      }
+    },
+    "sections": {
+      "internalTitle": "Explore The Event",
+      "externalTitle": "Useful Links"
+    },
+    "cards": {
+      "presentation": {
+        "title": "Presentation",
+        "description": "Slide-by-slide talk content with the full Supabase breakdown."
+      },
+      "demo": {
+        "title": "Demo (Message Wall)",
+        "description": "Hands-on demo experience inspired by the live session."
+      },
+      "challenge": {
+        "title": "Challenge",
+        "description": "Interactive challenge for attendees."
+      },
+      "eventRecord": {
+        "title": "Event Record",
+        "description": "Watch the full event recording on Google Drive."
+      },
+      "luma": {
+        "title": "Luma Registration",
+        "description": "Register or revisit the event page on Luma."
+      },
+      "whatsapp": {
+        "title": "Community WhatsApp",
+        "description": "Join the community group to stay updated."
+      },
+      "docs": {
+        "title": "Supabase Docs",
+        "description": "Official documentation for learning and implementation."
+      },
+      "youtube": {
+        "title": "Supabase YouTube",
+        "description": "Official channel for product updates and tutorials."
+      },
+      "linkedin": {
+        "title": "Speaker LinkedIn",
+        "description": "Profile link will be added soon."
+      }
+    }
+  },
+  "challenge": {
+    "title": "Supabase Challenge: Claim a Code",
+    "subtitle": "Drag blocks to build the request, then Run.",
+    "codes": "Codes remaining: {remaining} / {total}",
+    "warning": "Only the first two valid claims win.",
+    "disabledNotice": "Challenge is currently off.",
+    "allClaimedNotice": "You can still have fun, but all codes have been claimed.",
+    "eyebrow": "Build a valid Supabase request flow",
+    "form": {
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "whatsappLabel": "WhatsApp",
+      "whatsappPlaceholder": "+222 45 00 00 00"
+    },
+    "claimed": {
+      "title": "Already Claimed",
+      "empty": "No one has claimed yet.",
+      "name": "Name",
+      "whatsapp": "WhatsApp"
+    },
+    "palette": {
+      "title": "Block Palette"
+    },
+    "pipeline": {
+      "title": "Pipeline",
+      "rowBuilder": "Row Builder",
+      "legend": {
+        "client": "1. Client",
+        "action": "2. Action (RPC or SELECT)",
+        "rpcParams": "RPC params: participant + whatsapp",
+        "selectParams": "SELECT params: optional participant/whatsapp",
+        "params": "3. Parameters"
+      },
+      "empty": "Drop blocks here to assemble your request.",
+      "removeBlock": "Remove block"
+    },
+    "runPanel": {
+      "running": "Running...",
+      "run": "Run",
+      "reset": "Reset",
+      "idle": "Assemble a valid pipeline and click Run.",
+      "availableCode": "Available code: {code}",
+      "claimedCode": "You claimed {code}",
+      "claimId": "claim_id",
+      "previewHelp": "Switch to rpc + claim_giveaway_code to submit a winning claim.",
+      "claimHelp": "Send your claim_id on WhatsApp to confirm.",
+      "confirmOnWhatsapp": "Confirm on WhatsApp ({phone})"
+    },
+    "status": {
+      "previewSuccess": "Execution complete. You queried available code from table path.",
+      "claimSuccess": "Execution complete. Valid claim request."
+    },
+    "errors": {
+      "nameRequired": "Name is required.",
+      "whatsappRequired": "WhatsApp is required.",
+      "invalidPhone": "Please enter a valid phone number.",
+      "challengeDisabled": "Challenge is currently off.",
+      "whatsappAlreadyClaimed": "This WhatsApp number already claimed a code.",
+      "noCodesRemaining": "All codes have already been claimed.",
+      "claimConflict": "Claim conflict, please retry.",
+      "fixFormErrors": "Please fix form errors before running.",
+      "pipelineEmpty": "Pipeline is empty. Drag blocks first.",
+      "executionUnexpected": "Execution failed unexpectedly. Try again.",
+      "requestFailed": "Request failed.",
+      "pipelineEmptyBeforeRun": "Pipeline is empty. Add blocks before running.",
+      "mustStartWithClient": "Pipeline must start with supabase_client.",
+      "missingOperation": "Missing operation block: rpc or select_available_code.",
+      "missingRpcStep": "Missing rpc step before function call.",
+      "missingRpcFunction": "Missing RPC function name.",
+      "wrongRpcFunction": "Wrong RPC function name.",
+      "unexpectedAfterQuery": "Unexpected block after query: {block}",
+      "unsupportedParameter": "Unsupported parameter: {block}",
+      "parameterDuplicated": "Parameter duplicated: {block}",
+      "unexpectedAfterFunction": "Unexpected block after function: {block}",
+      "missingRequiredParameter": "Missing required parameter: {block}"
+    }
+  },
+  "demo": {
+    "header": {
+      "eyebrow": "Live Demo",
+      "title": "Message Wall",
+      "subtitle": "Mock auth + mock data for now. Built to swap to Supabase auth, database, and realtime with minimal refactor."
+    },
+    "loading": "Loading wall...",
+    "empty": "No messages match your search. Try a broader query.",
+    "search": {
+      "title": "Search & Filter",
+      "placeholder": "Search text, name, role...",
+      "roles": {
+        "all": "All roles",
+        "student": "Student",
+        "professional": "Professional",
+        "other": "Other"
+      },
+      "positions": {
+        "all": "All positions"
+      }
+    },
+    "fab": {
+      "addTitle": "Add message",
+      "add": "Add",
+      "searchTitle": "Search and filter",
+      "search": "Search",
+      "profileTitle": "Edit profile",
+      "profile": "Profile",
+      "loginTitle": "Sign in or sign up",
+      "login": "Login",
+      "logoutTitle": "Sign out",
+      "logout": "Logout"
+    },
+    "authModal": {
+      "title": "Create account",
+      "subtitle": "Mock auth mode: your account is validated instantly, no email confirmation.",
+      "submit": "Create account",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "roleLabel": "Role",
+      "rolePlaceholder": "e.g. Student, Developer, Founder",
+      "avatarLabel": "Avatar image",
+      "avatarPlaceholder": "Image URL (optional)",
+      "preview": "Preview",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "editTitle": "Edit profile",
+      "editSubtitle": "Mock profile editing. Later this will update your Supabase profile row.",
+      "editSubmit": "Save profile",
+      "signInTab": "Sign in",
+      "signUpTab": "Sign up",
+      "signInTitle": "Sign in",
+      "signUpTitle": "Create account",
+      "signInSubtitle": "Use your Supabase account to post with your profile metadata.",
+      "signUpSubtitle": "Create an account and set name, position, and profile image.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Your password",
+      "positionLabel": "Position",
+      "positionPlaceholder": "e.g. Student, Developer, Founder",
+      "profilImageLabel": "Profile image URL",
+      "profilImagePlaceholder": "https://...",
+      "signInSubmit": "Sign in",
+      "signUpSubmit": "Sign up"
+    },
+    "addMessageModal": {
+      "title": "Add message",
+      "subtitle": "Mock mode now. Later this will insert rows into Supabase.",
+      "titleLabel": "Title (optional)",
+      "titlePlaceholder": "Quick title",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Share a note with everyone...",
+      "charsLeft": "{count} chars left",
+      "colorLabel": "Card color",
+      "pickColor": "Pick {color}",
+      "cancel": "Cancel",
+      "posting": "Posting...",
+      "submit": "Post message"
+    },
+    "errors": {
+      "loadFailed": "Could not load mock wall data. Please refresh.",
+      "nameRequired": "Please enter your name.",
+      "roleRequired": "Please enter your role.",
+      "authFailed": "Could not create account. Try again.",
+      "loginBeforeEdit": "Please log in before editing profile.",
+      "loginBeforePost": "Please log in before posting.",
+      "messageRequired": "Please enter a message.",
+      "messageTooLong": "Message is too long. Max {max} characters.",
+      "cooldown": "Please wait {seconds}s before posting again.",
+      "requestFailed": "Request failed.",
+      "emailRequired": "Please enter your email.",
+      "passwordRequired": "Please enter your password.",
+      "positionRequired": "Please enter your position.",
+      "invalidCredentials": "Invalid email or password.",
+      "accountExists": "Account already exists for this email.",
+      "deleteNotAllowed": "You can only delete your own messages.",
+      "signInFirst": "Please sign in first.",
+      "messageNotFound": "Message not found."
+    },
+    "toolbar": {
+      "searchLabel": "Search messages",
+      "searchPlaceholder": "Search text, name, role...",
+      "filterLabel": "Filter role",
+      "roles": {
+        "all": "All roles",
+        "student": "Student",
+        "professional": "Professional",
+        "other": "Other"
+      },
+      "login": "Login",
+      "profile": "Profile",
+      "add": "Add",
+      "positions": {
+        "all": "All positions"
+      },
+      "logout": "Logout"
+    },
+    "authStatus": "Logged in as {email}",
+    "anonymousName": "Anonymous",
+    "anonymousPosition": "Guest",
+    "deleteMessage": "Delete message",
+    "profileModal": {
+      "title": "Edit profile",
+      "subtitle": "UI-only mode for now. This will update auth metadata later.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "positionLabel": "Position",
+      "positionPlaceholder": "e.g. Student, Developer, Founder",
+      "profilImageLabel": "Profile image URL",
+      "profilImagePlaceholder": "https://...",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "save": "Save profile"
+    }
+  }
+}
